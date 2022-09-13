@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        calcWords(keyboard.nextLine());
+        System.out.println("Введено " +  calcWords(keyboard.nextLine()) + " слов");
 
     }
 
-    private static void calcWords(String text) {
+    private static int calcWords(String text) {
         int count = 0;
         if (text.length() != 0){
             count++;
@@ -19,6 +19,6 @@ public class Task2 {
                 }
             }
         }
-        System.out.println("Введено: "+ count + " слов");
+        return count;
     }
 }

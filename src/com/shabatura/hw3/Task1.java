@@ -6,8 +6,9 @@ public class Task1 {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         String text = keyboard.nextLine();
-        System.out.println(deleteSpaces(text));
-        palindrome(deleteSpaces(text));
+        String withoutSpaces = deleteSpaces(text);
+        System.out.println(withoutSpaces);
+        palindrome(withoutSpaces);
     }
 
     private static String deleteSpaces(String text) {

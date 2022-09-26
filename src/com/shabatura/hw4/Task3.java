@@ -8,7 +8,7 @@ public class Task3 {
         int[] numbers = new int[2000];
         fillRandomArray(numbers);
         System.out.println(Arrays.toString(numbers));
-        changeToZero(numbers);
+        System.out.println(Arrays.toString(changeToZero(numbers)));
         System.out.println(Arrays.toString(numbers));
     }
 
@@ -19,13 +19,13 @@ public class Task3 {
         }
     }
 
-    private static void changeToZero(int[] array) {
+    private static int[] changeToZero(int[] array) {
         int[] arrayClone= Arrays.copyOf(array,array.length);
         for (int i = 0; i < arrayClone.length; i++) {
             if (arrayClone[i] % 2 == 0) {
                 arrayClone[i] = 0;
             }
         }
-        System.out.println(Arrays.toString(arrayClone));
+        return arrayClone;
     }
 }

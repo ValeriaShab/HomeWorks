@@ -46,7 +46,7 @@ public class Task2 {
         for (int i = 0; i < array.length; i++) {
             boolean isPrime = false;
             if (array[i] == 1)
-                isPrime = true;
+                isPrime = false;
             else {
                 for (int j = 2; j <= array[i] / 2; j++) {
                     if (array[i] % j == 0) {

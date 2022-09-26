@@ -19,9 +19,6 @@ public class Practice2 {
     }
 
     private static double costOfAllProductsUnderThousand(double[] costs) {
-        if (costs.length == 0) {
-            throw new RuntimeException("array has size 0.");
-        }
         double sum = 0;
         for (double cost : costs) {
             if (cost >= 1000) {

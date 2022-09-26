@@ -20,10 +20,12 @@ public class Task3 {
     }
 
     private static void changeToZero(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                array[i] = 0;
+        int[] arrayClone= Arrays.copyOf(array,array.length);
+        for (int i = 0; i < arrayClone.length; i++) {
+            if (arrayClone[i] % 2 == 0) {
+                arrayClone[i] = 0;
             }
         }
+        System.out.println(Arrays.toString(arrayClone));
     }
 }

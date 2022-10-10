@@ -31,9 +31,9 @@ public class Vector {
         return new Vector(x - vector.x, y - vector.y, z - vector.z);
     }
 
-    public static Vector[] generator(int N) {
-        Vector[] vectors = new Vector[N];
-        for (int i = 0; i < N; i++) {
+    public static Vector[] generator(int n) {
+        Vector[] vectors = new Vector[n];
+        for (int i = 0; i < n; i++) {
             vectors[i] = new Vector(Math.random(), Math.random(), Math.random());
         }
         return vectors;

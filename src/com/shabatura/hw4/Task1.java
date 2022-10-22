@@ -19,7 +19,7 @@ public class Task1 {
         }
     }
 
-    private static double findArithmeticMean(int[] array) {
+    public static double findArithmeticMean(int[] array) {
         double arithAverage = 0;
         if (array.length > 0) {
             double sum = 0;
@@ -31,7 +31,7 @@ public class Task1 {
         return arithAverage;
     }
 
-    private static double findGeometricMean(int[] array) {
+    public static double findGeometricMean(int[] array) {
         double sum = 1;
         for (int j : array) {
             sum *= j;

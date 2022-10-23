@@ -8,7 +8,7 @@ public class Practice2 {
         double[] costs = new double[12];
         fillRandomArray(costs);
         System.out.println(Arrays.toString(costs));
-        System.out.printf("Sum = %.2f %n", costOfAllProductsUnderThousand(costs));
+        System.out.printf("Sum = %.2f %n", costOfAllProductsOverThousand(costs));
     }
 
     private static void fillRandomArray(double[] array) {
@@ -18,7 +18,7 @@ public class Practice2 {
         }
     }
 
-    private static double costOfAllProductsUnderThousand(double[] costs) {
+    public static double costOfAllProductsOverThousand(double[] costs) {
         double sum = 0;
         for (double cost : costs) {
             if (cost >= 1000) {

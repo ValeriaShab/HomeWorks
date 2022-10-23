@@ -9,7 +9,7 @@ public class Task2 {
         System.out.println(checkArray(array));
     }
 
-    private static boolean checkArray(int[] array) {
+    public static boolean checkArray(int[] array) {
         int[] sorted = Arrays.copyOf(array, array.length);
         boolean changed;
         do {

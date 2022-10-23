@@ -22,11 +22,11 @@ public class Practice1 {
         }
     }
 
-    private static int getAvgBoyHeight(int[] heightValues) {
+    public static int getAvgBoyHeight(int[] heightValues) {
         return calcHeightSum(heightValues, true);
     }
 
-    private static int getAvgGirlHeight(int[] heightValues) {
+    public static int getAvgGirlHeight(int[] heightValues) {
         return calcHeightSum(heightValues, false);
     }
 

@@ -1,4 +1,4 @@
-INSERT INTO activity (id, text, actType_id, abonent_id)
+INSERT INTO Activity (id, text, actType_id, abonent_id)
 VALUES
 (1,'Knave was standing before them, in chains, with.',1,1491),
 (2,'March Hare. Sixteenth, added the Dormouse..',2,1735),

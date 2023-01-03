@@ -1,8 +1,8 @@
 CREATE TABLE ActType(
     id int NOT NULL,
-    typeName VARCHAR (255),
+    typeName VARCHAR(255),
     CONSTRAINT pk_actType PRIMARY KEY (id)
-);
+    );
 
 CREATE TABLE DevType(
     id int NOT NULL,

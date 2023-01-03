@@ -23,7 +23,7 @@ public class ServiceMenu {
         }
         int choice;
         do {
-            System.out.println("\n\nInput a number to view information:");
+            System.out.println("\n\nВведите число, чтобы увидеть информацию");
             for (int i = 0; i < actionsMenu.length; i++) {
                 System.out.printf("%d) %s%n", i + 1, actionsMenu[i]);
             }
@@ -44,41 +44,10 @@ public class ServiceMenu {
             }
         } while (choice > 0 && choice < actionsMenu.length);
         SCANNER.close();
-
-    }
-
-    private void mostPopularDevice() {
-        System.out.println("Most popular device model among subscribers:");
-        List<Object[]> activity = DEVICE_ACTION.getMostPopularDevice();
-        printInfo(activity);
-    }
-
-    private void mostPopularService() {
-        System.out.println("Most popular service among subscribers:");
-        List<Object[]> activity = ACT_TYPE_ACTION.getMostPopularActivity();
-        printInfo(activity);
-    }
-
-    private void topAbonentsByInternet() {
-        System.out.println("TOP 5 subscribers by internet searches number");
-        List<Object[]> subscribers = ABONENT_ACTION.getTop5AbonentsByInternet();
-        printInfo(subscribers);
-    }
-
-    private void topAbonentsBySMS() {
-        System.out.println("TOP 5 subscribers by SMS number");
-        List<Object[]> subscribers = ABONENT_ACTION.getTop5AbonentsBySMS();
-        printInfo(subscribers);
-    }
-
-    private void topAbonentsByCalls() {
-        System.out.println("TOP 5 subscribers by call number");
-        List<Object[]> subscribers = ABONENT_ACTION.getTop5AbonentsByCall();
-        printInfo(subscribers);
     }
 
     private void searchSMSbyPhrase() {
-        System.out.println("Enter phrase by which you want to find SMS:");
+        System.out.println("Введите фразу по которой вы хотите найти сообщение:");
         SCANNER.nextLine();
         String phrase = SCANNER.nextLine();
         List<Activity> SMSyByText = ACTIVITY_ACTION.getSMSyByText(phrase);
@@ -87,8 +56,37 @@ public class ServiceMenu {
                 System.out.println(activity);
             }
         } else {
-            System.out.println("Unfortunately, no SMS were found with '" + phrase + "'");
+            System.out.println("В базе нет такого сообщения '" + phrase + "'");
         }
+    }
+
+    private void topAbonentsByCalls() {
+        System.out.println("TOP 5 абонентов по вызовам");
+        List<Object[]> subscribers = ABONENT_ACTION.getTop5AbonentsByCall();
+        printInfo(subscribers);
+    }
+
+    private void topAbonentsBySMS() {
+        System.out.println("TOP 5 абонентов по количеству СМС");
+        List<Object[]> subscribers = ABONENT_ACTION.getTop5AbonentsBySMS();
+        printInfo(subscribers);
+    }
+    private void topAbonentsByInternet() {
+        System.out.println("TOP 5 абонентов по использованию сети");
+        List<Object[]> subscribers = ABONENT_ACTION.getTop5AbonentsByInternet();
+        printInfo(subscribers);
+    }
+
+    private void mostPopularService() {
+        System.out.println("Самый популярный сервис среди абонентов:");
+        List<Object[]> activity = ACT_TYPE_ACTION.getMostPopularActivity();
+        printInfo(activity);
+    }
+
+    private void mostPopularDevice() {
+        System.out.println("Самая популярная модель среди абонентов:");
+        List<Object[]> activity = DEVICE_ACTION.getMostPopularDevice();
+        printInfo(activity);
     }
 
     public void printInfo(List<Object[]> information){

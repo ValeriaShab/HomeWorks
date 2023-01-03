@@ -13,8 +13,8 @@ public class ActivityAction {
     public List<Activity> getSMSyByText(String text) {
         return ENTITY_MANAGER.createNativeQuery(
                         "SELECT * FROM activity \n" +
-                                "INNER JOIN activityType ON activityType.id = activity.activityType_id\n" +
-                                "WHERE LOWER(activityText) LIKE ? AND activityType.typeName = 'SMS'", Activity.class)
+                                "INNER JOIN actType ON actType.id = activity.actType_id\n" +
+                                "WHERE LOWER(text) LIKE ? AND actType.typeName = 'SMS'", Activity.class)
                 .setParameter(1, "%" + text.toLowerCase() + "%")
                 .getResultList();
     }

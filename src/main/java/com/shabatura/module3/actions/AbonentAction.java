@@ -10,11 +10,11 @@ public class AbonentAction {
 
     public List<Object[]> getTop5AbonentsBySMS (){
         return ENTITY_MANAGER.createNativeQuery(
-                        "SELECT CONCAT(subscriber.firstName, ' ', subscriber.lastName) as subscribersName, COUNT(activity.id) FROM subscriber \n" +
-                                "INNER JOIN activity ON activity.subscriber_id = subscriber.id\n" +
-                                "INNER JOIN activityType ON activityType.id = activity.activityType_id\n" +
-                                "WHERE activityType.typeName = 'SMS'\n" +
-                                "GROUP BY subscribersName\n" +
+                        "SELECT CONCAT(abonent.firstName, ' ', abonent.lastName) as abonentName, COUNT(activity.id) FROM abonent \n" +
+                                "INNER JOIN activity ON activity.abonent_id = abonent.id\n" +
+                                "INNER JOIN actType ON actType.id = activity.actType_id\n" +
+                                "WHERE actType.typeName = 'SMS'\n" +
+                                "GROUP BY abonentName\n" +
                                 "ORDER BY COUNT(*) desc\n" +
                                 "LIMIT 5;")
                 .getResultList();
@@ -22,11 +22,11 @@ public class AbonentAction {
 
     public List<Object[]> getTop5AbonentsByCall (){
         return ENTITY_MANAGER.createNativeQuery(
-                        "SELECT CONCAT(subscriber.firstName, ' ', subscriber.lastName) as subscribersName, COUNT(activity.id) FROM subscriber \n" +
-                                "INNER JOIN activity ON activity.subscriber_id = subscriber.id\n" +
-                                "INNER JOIN activityType ON activityType.id = activity.activityType_id\n" +
-                                "WHERE activityType.typeName = 'Call'\n" +
-                                "GROUP BY subscribersName\n" +
+                        "SELECT CONCAT(abonent.firstName, ' ', abonent.lastName) as abonentName, COUNT(activity.id) FROM abonent \n" +
+                                "INNER JOIN activity ON activity.abonent_id = abonent.id\n" +
+                                "INNER JOIN actType ON actType.id = activity.actType_id\n" +
+                                "WHERE actType.typeName = 'Call'\n" +
+                                "GROUP BY abonentName\n" +
                                 "ORDER BY COUNT(*) desc\n" +
                                 "LIMIT 5;")
                 .getResultList();
@@ -34,11 +34,11 @@ public class AbonentAction {
 
     public List<Object[]> getTop5AbonentsByInternet (){
         return ENTITY_MANAGER.createNativeQuery(
-                        "SELECT CONCAT(subscriber.firstName, ' ', subscriber.lastName) as subscribersName, COUNT(activity.id) FROM subscriber \n" +
-                                "INNER JOIN activity ON activity.subscriber_id = subscriber.id\n" +
-                                "INNER JOIN activityType ON activityType.id = activity.activityType_id\n" +
-                                "WHERE activityType.typeName = 'Internet'\n" +
-                                "GROUP BY subscribersName\n" +
+                        "SELECT CONCAT(abonent.firstName, ' ', abonent.lastName) as abonentName, COUNT(activity.id) FROM abonent \n" +
+                                "INNER JOIN activity ON activity.abonent_id = abonent.id\n" +
+                                "INNER JOIN actType ON actType.id = activity.actType_id\n" +
+                                "WHERE actType.typeName = 'Internet'\n" +
+                                "GROUP BY abonentName\n" +
                                 "ORDER BY COUNT(*) desc\n" +
                                 "LIMIT 5;")
                 .getResultList();

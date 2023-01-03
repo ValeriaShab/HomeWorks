@@ -12,15 +12,15 @@ VALUES
     (9, 'Samsung S20', 1),
     (10, 'Samsung S10', 1),
 
-    (1, 'Apple iPad Pro', 2),
-    (2, 'Apple iPad', 2),
-    (3, 'Samsung Galaxy Tab S6', 2),
-    (4, 'Samsung Galaxy Tab A8', 2),
-    (5, 'Samsung Galaxy Tab A7', 2),
-    (6, 'Lenovo Tab M10', 2),
-    (7, 'Lenovo Tab P11', 2),
+    (11, 'Apple iPad Pro', 2),
+    (12, 'Apple iPad', 2),
+    (13, 'Samsung Galaxy Tab S6', 2),
+    (14, 'Samsung Galaxy Tab A8', 2),
+    (15, 'Samsung Galaxy Tab A7', 2),
+    (16, 'Lenovo Tab M10', 2),
+    (17, 'Lenovo Tab P11', 2),
 
-    (1, 'Samsung Galaxy Watch 4', 3),
-    (2, 'Apple Watch 8', 3),
-    (3, 'Samsung Galaxy Watch 5', 3),
-    (4, 'Gelious Pro', 3);
+    (18, 'Samsung Galaxy Watch 4', 3),
+    (19, 'Apple Watch 8', 3),
+    (20, 'Samsung Galaxy Watch 5', 3),
+    (21, 'Gelious Pro', 3);

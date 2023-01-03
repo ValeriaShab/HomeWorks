@@ -1,4 +1,4 @@
-INSERT INTO ActivityType(id, typeName)
+INSERT INTO ActType (id, typeName)
 VALUES
     (1, 'SMS'),
     (2, 'Call'),

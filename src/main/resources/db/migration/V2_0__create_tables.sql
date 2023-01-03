@@ -1,44 +1,44 @@
-CREATE TABLE ActType (
-    id int(11) NOT NULL,
+CREATE TABLE ActType(
+    id int NOT NULL,
     typeName VARCHAR (255),
     CONSTRAINT pk_actType PRIMARY KEY (id)
 );
 
 CREATE TABLE DevType(
-    id int(11) NOT NULL,
+    id int NOT NULL,
     typeName VARCHAR(255),
     CONSTRAINT pk_devType PRIMARY KEY (id)
     );
 
 CREATE TABLE IF NOT EXISTS Device(
-    id int(11) NOT NULL,
+    id int NOT NULL,
     modelName VARCHAR(255),
-    devType_id int(11),
+    devType_id int,
     CONSTRAINT pk_device PRIMARY KEY (id)
     );
 
 CREATE TABLE IF NOT EXISTS Tariff(
-    id int(11) NOT NULL,
+    id int NOT NULL,
     nameOfTariff VARCHAR(255),
     price FLOAT,
     CONSTRAINT pk_tariff PRIMARY KEY (id)
     );
 
 CREATE TABLE IF NOT EXISTS Abonent(
-    id int(11) NOT NULL,
+    id int NOT NULL,
     firstName VARCHAR(255),
     lastName VARCHAR(255),
     phoneNumber VARCHAR(255),
-    tariff_id int(11),
-    device_id int(11),
+    tariff_id int,
+    device_id int,
     CONSTRAINT pk_abonent PRIMARY KEY (id)
     );
 
 CREATE TABLE IF NOT EXISTS Activity(
-    id int(11) NOT NULL,
+    id int NOT NULL,
     text VARCHAR(255),
-    actType_id int(11),
-    abonent_id int(11),
+    actType_id int,
+    abonent_id int,
     CONSTRAINT pk_activity PRIMARY KEY (id)
     );
 

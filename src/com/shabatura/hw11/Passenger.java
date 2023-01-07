@@ -11,6 +11,6 @@ public class Passenger {
 
     @Override
     public String toString() {
-        return "Имя: " + name + "\n" + "Возраст: " + sex;
+        return "Имя: " + name + "\n" + "Пол: " + sex;
     }
 }

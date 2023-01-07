@@ -1,4 +1,4 @@
-package main.java.com.shabatura.module2;
+package com.shabatura.module2;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -108,8 +108,7 @@ public class AnalyticalInformation {
 
     public void sortAllOrders() {
         Comparator<Invoice> compareByAge = Comparator.comparing(t -> t.getCustomer().getAge());
-        Comparator<Invoice> compareByItems = Comparator.comparing(t -> t.getGoods().stream()
-                .count());
+        Comparator<Invoice> compareByItems = Comparator.comparing(t -> t.getGoods().size());
         Comparator<Invoice> compareBySum = Comparator.comparing(t -> t.getGoods().stream()
                 .mapToInt(Goods::getPrice)
                 .sum());

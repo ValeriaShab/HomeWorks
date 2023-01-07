@@ -1,4 +1,4 @@
-package main.java.com.shabatura.module2;
+package com.shabatura.module2;
 
 import java.util.Scanner;
 

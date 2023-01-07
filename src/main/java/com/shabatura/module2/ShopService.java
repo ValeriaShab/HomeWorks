@@ -1,7 +1,8 @@
-package main.java.com.shabatura.module2;
+package com.shabatura.module2;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -60,10 +61,13 @@ public class ShopService {
     }
 
     public static Invoice formInvoice() throws MyException {
+        Date dateNow = new Date();
+        SimpleDateFormat timeNow = new SimpleDateFormat("hh:mm:ss");
+        String time = timeNow.format(dateNow);
         List<Goods> goods = formOrder(readFromCSVtoList());
         Customer customer = PersonService.generateCustomer();
         String type = Invoice.setType(Invoice.chooseInvoiceType(goods));
-        return new Invoice(goods, customer, type);
+        return new Invoice(goods, customer, type, time);
 
     }
 

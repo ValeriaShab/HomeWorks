@@ -1,16 +1,17 @@
-package main.java.com.shabatura.module2;
-
+package com.shabatura.module2;
 import lombok.Getter;
 
+import java.util.Date;
 import java.util.List;
 
 @Getter
-
 public class Invoice {
     List<Goods> goods;
     Customer customer;
     String type;
+    private String date;
     static int limit;
+
 
     public static String setType(String s) {
         return s;
@@ -36,14 +37,16 @@ public class Invoice {
         Invoice.limit = limit;
     }
 
-    public Invoice(List<Goods> goods, Customer customer, String type) {
+    public Invoice(List<Goods> goods, Customer customer, String type, String date) {
         this.goods = goods;
         this.customer = customer;
         this.type = type;
+        this.date = date;
     }
+
 
     @Override
     public String toString() {
-        return "Invoice: " + type + " " + customer + "\n" + goods;
+        return "Invoice: " + date + " " + type + " " + customer + "\n" + goods;
     }
 }

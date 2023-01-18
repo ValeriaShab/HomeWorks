@@ -1,5 +1,7 @@
 package main.java.com.shabatura.hw10;
 
+import java.util.Objects;
+
 public class Student {
     String firstName;
     String lastName;
@@ -18,5 +20,14 @@ public class Student {
             return 100;
         }
         return 80;
+    }
+    public boolean equals(Student student){
+        return (this.firstName.equals(student.firstName) && this.lastName.equals(student.lastName) &&
+                this.group.equals(student.group) && this.averageMark == student.averageMark);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, group, averageMark);
     }
 }

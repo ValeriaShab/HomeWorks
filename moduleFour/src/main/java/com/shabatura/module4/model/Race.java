@@ -28,7 +28,7 @@ public class Race {
     @Column(name = "number_for_a_bet")
     private int numberForABet;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = RaceStatus.class, cascade=CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = RaceStatus.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "race_id", nullable = false)
     private RaceStatus raceStatus;
 
@@ -40,7 +40,7 @@ public class Race {
         this.raceStatus = raceStatus;
     }
 
-    public Race(LocalDateTime date,int horseNumber, int amount, int place, int numberForABet) {
+    public Race(LocalDateTime date, int horseNumber, int amount, int place, int numberForABet) {
         this.date = date;
         this.horseNumber = horseNumber;
         this.amount = amount;

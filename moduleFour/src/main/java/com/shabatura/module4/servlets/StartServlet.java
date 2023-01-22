@@ -23,7 +23,7 @@ import java.util.concurrent.*;
         name = "StartServlet",
         urlPatterns = {"/race/start"}
 )
-public class StartServlet extends HttpServlet{
+public class StartServlet extends HttpServlet {
     private static final LocalDateTime DATE_TIME = LocalDateTime.now();
     private static final RaceDao RACE_DAO = new RaceDao();
     private static final RaceStatusDao RACE_STATUS_DAO = new RaceStatusDao();

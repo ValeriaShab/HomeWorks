@@ -22,7 +22,8 @@ public class RaceStatusServlet extends HttpServlet {
     final String PASSWORD = "root";
     final String DRIVER = "org.postgresql.Driver";
     Connection connection = null;
-    private static final RaceStatusDao RACE_STATUS_DAO= new RaceStatusDao();
+    private static final RaceStatusDao RACE_STATUS_DAO = new RaceStatusDao();
+
     @Override
     public void init() {
         try {

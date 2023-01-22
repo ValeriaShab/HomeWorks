@@ -1,6 +1,7 @@
 package com.shabatura.module4.model;
 
 import lombok.*;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -37,6 +38,7 @@ public class RaceStatus {
         this.numberForABet = numberForABet;
         this.date = date;
     }
+
     public RaceStatus(int raceId, int winner, int numberForABet, LocalDateTime date) {
         this.raceId = raceId;
         this.winner = winner;

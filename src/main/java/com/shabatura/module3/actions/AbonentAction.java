@@ -13,7 +13,7 @@ public class AbonentAction {
                         "SELECT CONCAT(abonent.firstName, ' ', abonent.lastName) as abonentName, COUNT(activity.id) FROM abonent \n" +
                                 "INNER JOIN activity ON activity.abonent_id = abonent.id\n" +
                                 "INNER JOIN actType ON actType.id = activity.actType_id\n" +
-                                "WHERE actType.typeName = 'SMS'\n" +
+                                "WHERE actType.typeName = 'SM'\n" +
                                 "GROUP BY abonentName\n" +
                                 "ORDER BY COUNT(*) desc\n" +
                                 "LIMIT 5;")

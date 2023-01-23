@@ -1,0 +1,22 @@
+INSERT INTO Activity (id, text, actType_id, abonent_id)
+VALUES
+(1,'Knave was standing before them, in chains, with.',1,1491),
+(2,'March Hare. Sixteenth, added the Dormouse..',2,1735),
+(3,'Dodo, the best way to explain it is to do it.',3,425),
+(4,'Alice; but when you have to turn into a.',1,23),
+(5,'Majesty must cross-examine THIS witness.Well,.',2,752),
+(6,'Pigeon. I can see youre trying to invent.',3,1232),
+(7,'So she began again: Ou est ma chatte? which.',1,1952),
+(8,'March Hare. Exactly so, said Alice. Then you.',2,253),
+(9,'Very soon the Rabbit noticed Alice, as she went.',3,1204),
+(10,'Alice, in a hurry to change the subject. Ten.',1,273),
+(11,'I only wish people knew that: then they wouldnt.',2,257),
+(12,'The Mouse did not answer, so Alice went on.',3,105),
+(13,'Alice soon came to the conclusion that it was a.',1,486),
+(14,'I will just explain to you how it was done. They.',2,914),
+(15,'Mock Turtle. She cant explain it, said the.',3,351),
+(16,'PLEASE mind what youre doing! cried Alice,.',1,1167),
+(17,'Alice, always ready to make herself useful, and.',2,189),
+(18,'In the very middle of the court was a table,.',3,1480),
+(19,'Alice. The poor little thing was snorting like a.',1,1238),
+(20,'And so it was indeed: she was now only ten.',2,587);
